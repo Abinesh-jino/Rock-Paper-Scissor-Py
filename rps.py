@@ -38,7 +38,10 @@ def play_rps(name='Player'):
 
         playerchoice = input(f"\n {name} , please select from Below \n\t 1 for Rock 🪨 \n\t 2 for Paper 📃, or \n\t 3 for Scissors ✂️ \n \n Enter Your Choice : ")
 
-        if
+        if int(playerchoice) >3 or int(playerchoice)<1:
+            print(f" \n\n {name} , please Only Enter 1 , 2 or 3 \n\n" )
+            playerchoice = input(f"\n {name} , please select from Below \n\t 1 for Rock 🪨 \n\t 2 for Paper 📃, or \n\t 3 for Scissors ✂️ \n \n Enter Your Choice : ")
+        
         #Casting into Int Values
 
         player = int(playerchoice)
@@ -53,9 +56,7 @@ def play_rps(name='Player'):
 
         print("")
 
-        if player<1 or player > 3 :
-            sys.exit(" {name} , please Only Enter 1 , 2 or 3 \n\n" )
-        elif player ==1 and computer==3 :
+        if player ==1 and computer==3 :
             print(" Rock Beats Scissor \n")
             print(f" {name} , you won 🏆 🥳 \n\n  ")
         elif player==2 and computer==1 :
